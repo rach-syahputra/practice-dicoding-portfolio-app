@@ -1,3 +1,7 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use 'sass:map';
+
 main .skills .main-skills .skill-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
@@ -43,7 +47,7 @@ main .skills .main-skills .skill-list {
 }
 
 /* MD: minimum viewport width 768px or above */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: map.get(var.$breakpoints, 'md')) {
   main .skills .main-skills .skill-list {
     gap: 24px;
     grid-template-columns: repeat(3, minmax(100px, 1fr));
@@ -51,7 +55,7 @@ main .skills .main-skills .skill-list {
 }
 
 /* LG: minimum viewport width 992px or above */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: map.get(var.$breakpoints, 'lg')) {
   main .skills .main-skills .skill-list {
     gap: 32px;
   }
