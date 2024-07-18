@@ -60,19 +60,19 @@ main .section .section-title:after {
 }
 
 /* SM: minimum viewport width 576px or above */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 540px;
   }
 }
 /* MD: minimum viewport width 768px or above */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .container {
     max-width: 720px;
   }
 }
 /* LG: minimum viewport width 992px or above */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .container {
     max-width: 960px;
   }
