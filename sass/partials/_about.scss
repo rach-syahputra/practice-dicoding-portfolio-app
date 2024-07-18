@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as var;
+@use 'sass:map';
+
 main .about .main-about {
   display: flex;
   flex-direction: column;
@@ -31,7 +34,7 @@ main .about .main-about {
 }
 
 /* MD: minimum viewport width 768px or above */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: map.get(var.$breakpoints, 'md')) {
   main .about .main-about {
     flex-direction: row;
 
