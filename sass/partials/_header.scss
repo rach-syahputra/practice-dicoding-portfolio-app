@@ -1,3 +1,7 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use 'sass:map';
+
 header {
   .navbar-wrapper {
     position: fixed;
@@ -64,14 +68,14 @@ header {
 }
 
 /* SM: minimum viewport width 576px or above */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: map.get(var.$breakpoints, 'sm')) {
   header .navbar {
     padding: 25px 40px;
   }
 }
 
 /* MD: minimum viewport width 768px or above */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: map.get(var.$breakpoints, 'md')) {
   header .navbar {
     button.hamburger-btn {
       display: none;
@@ -91,7 +95,7 @@ header {
 }
 
 /* LG: minimum viewport width 992px or above */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: map.get(var.$breakpoints, 'lg')) {
   header .navbar {
     padding: 24px 50px;
   }
